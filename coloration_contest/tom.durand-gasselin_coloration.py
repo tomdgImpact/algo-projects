@@ -91,9 +91,13 @@ def __greedy_BFS(G, c, nbcolor, M, x) :
                 q.enqueue(adj)
     return (nbcolor, c)
 
-def color_greedy(G):
+def bipartite (G):
     if __bipartiteBFS(G) :
         return __bipartite_col(G)
+
+def color_greedy(G):
+    #if __bipartiteBFS(G) :
+     #   return __bipartite_col(G)
     c = [0] * G.order
     M = [False] * G.order
     nbcolor = 1
